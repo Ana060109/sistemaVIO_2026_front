@@ -115,7 +115,7 @@ function listIngressos() {
       />
       <TableContainer style={{ margin: "2px" }} component={Paper}>
         <Table size="small" aria-label="">
-          <TableHead style={{ backgroundColor: "red", borderStyle: "solid" }}>
+          <TableHead style={{ backgroundColor: "purple", borderStyle: "solid" }}>
             <TableRow>
               <TableCell align="center">PREÇO</TableCell>
               <TableCell align="center">TIPO</TableCell>

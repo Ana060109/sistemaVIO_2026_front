@@ -5,7 +5,7 @@ export default function FooterIndex() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#D52D2D",
+        backgroundColor: "#c42dd5",
         width: "100%",
         height: "30px",
         position: "fixed",
@@ -15,7 +15,7 @@ export default function FooterIndex() {
         alignItems: "center"
       }}
     >
-        <p>&copy; Desenvolvido por Vinícius Soares Peroni</p>
+        <p>&copy; Desenvolvido por Ana Carolina</p>
     </Box>
   );
 }
