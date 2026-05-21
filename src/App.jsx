@@ -15,6 +15,8 @@ import DefaultLayoutIndex from "./components/defaultLayoutIndex/DefaultLayoutInd
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 
+import createEvento from "./pages/eventos/CreateEvent";
+
 function App() {
   return (
     <div>
@@ -42,6 +44,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <Home />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/createEvent"
+            element={
+              <ProtectedRoute>
+                <CreateEvent />
               </ProtectedRoute>
             }
           />
