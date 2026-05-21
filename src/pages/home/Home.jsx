@@ -36,7 +36,6 @@ function Home(){
                 <Button fullWidth variant="contained" onClick={()=> {navigate("/ingressos")}}>Ingressos</Button>
                 <br />
                 <br />
-                <LInk to="/createEvent"> Criar Evento </Link>
             </nav>
 
             <ListUsers/>

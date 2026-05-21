@@ -6,6 +6,7 @@ import Organizador from "./pages/organizadores/Organizador";
 import Eventos from "./pages/eventos/Eventos";
 import Ingresso from "./pages/ingresso/Ingressos";
 import AdicionarIngressos from "./pages/addIngresso/adicionarIngresso";
+import CreateEvent from "./pages/addEvento/createEvento";
 
 // Import Component
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
@@ -14,8 +15,6 @@ import DefaultLayoutIndex from "./components/defaultLayoutIndex/DefaultLayoutInd
 //Import das funções do router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
-
-import createEvento from "./pages/eventos/CreateEvent";
 
 function App() {
   return (
@@ -47,15 +46,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-
-          <Route
-            path="/createEvent"
-            element={
-              <ProtectedRoute>
-                <CreateEvent />
-              </ProtectedRoute>
-            }
-          />
           <Route
             path="/organizador"
             element={
@@ -72,6 +62,13 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route 
+            path="/criar/evento"
+            element={
+              <ProtectedRoute>
+                <CreateEvent />
+              </ProtectedRoute>
+            } />
           <Route
             path="/ingressos"
             element={

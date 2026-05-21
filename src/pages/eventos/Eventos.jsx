@@ -11,7 +11,7 @@ function Eventos(){
             <h1>Eventos</h1>
             <ListEventos/>
 
-            <Button fullWidth color="error" variant="contained" component={Link} to="/evento/novo">
+            <Button fullWidth color="error" variant="contained" component={Link} to="/criar/evento">
                 crie evento
             </Button>
 

@@ -5,7 +5,7 @@ export default function FooterIndex() {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#c42dd5",
+        backgroundColor: "#ae2dd5",
         width: "100%",
         height: "30px",
         position: "fixed",
@@ -15,7 +15,7 @@ export default function FooterIndex() {
         alignItems: "center"
       }}
     >
-        <p>&copy; Desenvolvido por Ana Carolina</p>
+        <p>&copy; Desenvolvido por Ana Carolina de Oliveira Monteiro</p>
     </Box>
   );
 }

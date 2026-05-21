@@ -90,7 +90,7 @@ function Cadastro() {
           alignItems: "center",
         }}
       >
-        <Avatar sx={{ margin: 1, backgroundColor: "purple" }}>
+        <Avatar sx={{ margin: 1, backgroundColor: "blue" }}>
           <AddIcon />
         </Avatar>
         <Typography component="h1" variant="h5">

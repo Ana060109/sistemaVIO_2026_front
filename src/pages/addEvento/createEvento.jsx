@@ -1,5 +1,5 @@
 import { useState } from "react";
-import sheets from "../axios/axios"; 
+import sheets from "../../axios/axios"; 
 import { TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -73,7 +73,7 @@ function CreateEvent() {
           Criar Evento
         </Button>
       </form>
-      {/* <Link to="/events">Listar Eventos</Link> */}
+      <Link to="/eventos">Listar Eventos</Link>
     </div>
   );
 }

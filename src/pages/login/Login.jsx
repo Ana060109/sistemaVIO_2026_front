@@ -24,6 +24,18 @@ function Login() {
     senha: ""
   });
 
+  useEffect(()=>{
+    getRefreshToken();
+  }, []);
+
+  const getRefreshToken = () =>{
+    const messageToken = localStorage.getItem('refreshToken');
+    if(messageToken){
+      showAlert("info", messageToken);
+    }
+    else{}
+  }
+
   const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
@@ -87,7 +99,7 @@ function Login() {
           alignItems: "center",
         }}
       >
-        <Avatar sx={{ margin: 1, backgroundColor: "purple" }}>
+        <Avatar sx={{ margin: 1, backgroundColor: "blue" }}>
           <LockClockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
