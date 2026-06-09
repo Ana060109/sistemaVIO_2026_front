@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api/v1",
+  baseURL: "http://10.89.240.40:5000/api/v1",
   headers: {
     accept: "application/json",
   },
@@ -20,10 +20,10 @@ api.interceptors.request.use(
 
 api.interceptors.response.use(
   (response) => {
-    if(response.data.userDelete){
-        localStorage.removeItem("token");
-        localStorage.setItem("refreshToken", response.data.message);
-        window.location.href = "/";
+    if (response.data.userDelete) {
+      localStorage.removeItem("token");
+      localStorage.setItem("refreshToken", response.data.message);
+      window.location.href = "/";
     }
     return Promise.resolve(response);
   },
@@ -48,7 +48,7 @@ api.interceptors.response.use(
 
 const sheets = {
   postLogin: (user) => api.post("/login", user),
-  postCadastro: (user) => api.post("/user", user),
+  postUser: (user) => api.post("/user", user),
   getUsers: () => api.get("/user"),
   getOrganizadores: () => api.get("/organizador"),
   getEventos: () => api.get("/evento"),
@@ -61,17 +61,17 @@ const sheets = {
   deleteEvento: (id_evento) => api.delete("/evento/" + id_evento),
 
   createEvento: (form, imagem) => {
-    const data = new FormData()
-    for(let key in form) data.append(key, form[key]);
-    if(imagem) data.append("imagem", imagem);
+    const data = new FormData();
+    for (let key in form) data.append(key, form[key]);
+    if (imagem) data.append("imagem", imagem);
 
     return api.post("/evento", data, {
-      headers:{
-        "Content-Type":"multipart/form-data",
-        Accept: "application/json"
-      }
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Accept: "application/json",
+      },
     });
-  }
+  },
 };
 
 export default sheets;
